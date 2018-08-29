@@ -44,10 +44,10 @@ function main() {
 
     game = new Game();
     game.start();
+    game.onOver(function () {
+      gameOver(game.score);
+    });
 
-    window.setTimeout(function () {
-      gameOver();
-    }, 3000)
   }
 
   function destroyGame() {
@@ -57,15 +57,12 @@ function main() {
   // -- game over 
 
 
-  function gameOver() {
+  function gameOver(score) {
     destroyGame();
-    buildGameOver();
+    buildGameOver(score);
   }
 
-  function buildGameOver() {
-
-    // @todo score
-    var score = 99;
+  function buildGameOver(score) {
 
     gameOverMain = buildDom(`
       <main>

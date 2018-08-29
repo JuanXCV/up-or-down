@@ -106,6 +106,16 @@ html, body {
   flex: 1;
 }
 
+
+.game .card.correct {
+  background: lime;
+}
+
+
+.game .card.incorrect {
+  background: orangered;
+}
+
 .game .actions {
   flex: 1;
   display: flex;
@@ -129,6 +139,11 @@ html, body {
 
 .game .actions button:active {
   background-color: hsl(60, 100%, 40%);
+}
+
+.game .actions button[disabled] {
+  background-color: #ccc;
+  cursor: default;
 }
 
 .game .next-card {
