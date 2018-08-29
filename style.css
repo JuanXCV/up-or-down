@@ -37,29 +37,12 @@ p {
 
 /* ---- layout ---- */
 
-#site-header {
-  padding: 30px 0;
-  color: white;
-  background: #111;
-}
-
-#site-footer {
-  color: white;
-  padding: 60px 0;
-  background: #111;
-}
-
-#site-main {
-  margin-bottom: 60px;
+html, body {
+  height: 100%;
 }
 
 .container {
   margin: 0 20px;
-}
-
-.section {
-  margin-bottom: 20px;
-  padding-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -74,24 +57,87 @@ p {
 
 /* ---- components ---- */
 
-.button {
-  width: 100%;
-  background-color: blue;
-  color: #fff;
-  border: 1px solid #fff
+.game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.button-alt {
-  color: blue;
-  background-color: #fff;
+.game header {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-/* ---- section ---- */
-
-section.testimonials {
-  // ...
+.game .score {
+  flex: 1;
 }
 
-section.testimonials .button {
-  margin-bottom: 10px;
+.game .label {
+  font-weight: bold;
+}
+
+.game .value {
+  font-style: italic;
+}
+
+.game .timer {
+  flex: 1;
+}
+
+.game .deck {
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.game .card {
+  height: 200px;
+  line-height: 200px;
+  font-size: 50px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  box-shadow: 2px 2px 2px #ccc;
+  border-radius: 15px;
+}
+
+.game .current-card {
+  flex: 1;
+}
+
+.game .actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.game .actions button {
+  flex: 1;
+  height: 80px;
+  font-size: 20px;
+  margin: 20px 0;
+  border: 1px solid black;
+  background-color: hsl(60, 100%, 50%);
+  cursor: pointer;
+}
+
+.game .actions button:hover {
+  background-color: hsl(60, 100%, 80%);
+}
+
+.game .actions button:active {
+  background-color: hsl(60, 100%, 40%);
+}
+
+.game .next-card {
+  flex: 1;
+}
+
+.game footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
